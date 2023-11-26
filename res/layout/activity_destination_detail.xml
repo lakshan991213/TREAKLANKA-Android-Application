@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".destinationDetail">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/idLLTop"
+            android:weightSum="8">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Back"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:id="@+id/idTVBack"></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Add to favorite"
+                android:gravity="right"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/gray"
+                android:id="@+id/favoriteTV"></TextView>
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/baseline_favorite_border_24"
+                android:id="@+id/favoriteBtn"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/idTVLocationName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idLLTop"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:text="SIGIRIYA"
+            android:textSize="50dp"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dambulla"
+            android:textSize="20dp"
+            android:textStyle="italic"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/idTVLocationName"
+            android:id="@+id/idTVCity"/>
+
+        <ImageView
+            android:id="@+id/idIVLocation"
+            android:layout_width="500dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/idTVCity"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logins" />
+
+        <TextView
+            android:id="@+id/idTVLocationMainDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idIVLocation"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="jnfjwebfhbhewlbfehrbfherbgherghberbghebgrkherbgherbgehjbgrhebrgherbglerhbgerhlbgelhrbglehbglherbgherlgbelrhgleb"
+            android:textSize="16dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Weather Forcast"
+            android:layout_below="@+id/idTVLocationMainDescription"
+            android:layout_marginLeft="30dp"
+            android:textSize="20dp"
+            android:id="@+id/idTVWea"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idLLWeather"
+            android:layout_below="@+id/idTVWea"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    app:cardElevation="5dp">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/idPBLoading2"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:visibility="visible"
+                android:layout_centerInParent="true"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="gone"
+                android:id="@+id/idRLWeather"
+                >
+                <ImageView
+                    android:id="@+id/idIVIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:src="@mipmap/ic_launcher" />
+
+
+                <TextView
+                    android:id="@+id/idTVTemprature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:padding="5dp"
+                    android:text="20"
+                    android:textColor="@color/black"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:textSize="50dp" />
+
+
+
+                <TextView
+                    android:id="@+id/idTVCondition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idIVIcon"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="Condition"
+                    android:textColor="@color/black"
+                    android:textAlignment="center" />
+            </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:text="See Weather Details"
+                android:id="@+id/idTVSeeWeather"
+                android:textSize="20dp" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:id="@+id/idRVWeather"
+            android:layout_below="@+id/idLLWeather"
+            android:visibility="gone"
+            ></androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/idTVLocationDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/idRVWeather"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="jnfjwebfhbhewlbfehrbfherbgherghberbghebgrkherbgherbgehjbgrhebrgherbglerhbgerhlbgelhrbglehbglherbgherlgbelrhgleb"
+            android:textSize="16dp" />
+         </RelativeLayout>
+
+</ScrollView>

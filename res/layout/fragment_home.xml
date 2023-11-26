@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/idLL">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="4"
+                        android:padding="5dp"
+                        android:text="Find your favorite place"
+                        android:textSize="40dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/idIVSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/roundrectangle"
+                        android:padding="15dp"
+                        android:src="@drawable/baseline_search_24" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idRVCity"
+                    android:padding="2dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="30dp"
+                        android:src="@drawable/home1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/black"
+                        android:text="See Articals"
+                        android:textSize="17dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="15dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginRight="50dp"
+                        android:layout_alignParentRight="true"
+                        android:id="@+id/idBVSeeArtical"/>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:weightSum="5"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="4.5"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:text="Top destinations"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all"
+                        android:textSize="18dp"
+                        android:id="@+id/idTVSeeall"
+                        android:layout_weight="0.5"/>
+                </LinearLayout>
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/idPBLoading"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="40dp"
+                    android:visibility="visible"
+                    android:layout_centerInParent="true"/>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.5"
+                    android:padding="5dp"
+                    android:id="@+id/idRVTopDestination"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/idTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/idLL"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:text="Get More Easy"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@+id/idTV"
+                android:id="@+id/idLLT"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp">
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/idIVBeach"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/beach"
+                    android:padding="15dp"
+                    app:shapeAppearanceOverlay="@style/circular"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/idIVHike"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/hike"
+                    android:padding="15dp"
+                    app:shapeAppearanceOverlay="@style/circular"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/idLLT"
+                android:weightSum="2"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/idIVTemple"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/temple"
+                    android:padding="15dp"
+                    app:shapeAppearanceOverlay="@style/circular"/>
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/idIVOther"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/other"
+                    android:padding="15dp"
+                    app:shapeAppearanceOverlay="@style/circular"/>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
