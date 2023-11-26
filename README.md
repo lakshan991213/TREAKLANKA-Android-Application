@@ -41,3 +41,11 @@ Explore TreakLanka's Android journey with Java, XML, RecyclerViews, CardViews, a
 - Dive into TreakLanka's open-source codebase on GitHub.
 - Contribute, enhance features, and join our vibrant community.
 
+## Screenshots
+
+![Home fragment](/screen shots/homeMain.jpg)
+![Details Activity](/screen shots/details.jpg)
+![PlanTrip](/screen shots/planTrip.jpg)
+![Notifications](/screen shots/notifications.jpg)
+![Favorites](/screen shots/favorite.jpg)
+
