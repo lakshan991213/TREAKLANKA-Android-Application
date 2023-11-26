@@ -45,10 +45,6 @@ Explore TreakLanka's Android journey with Java, XML, RecyclerViews, CardViews, a
 
 ## Screenshots
 
-![Home fragment](screenshots/homeMain.jpg)
-![Details Activity](screenshots/details.jpg)
-![PlanTrip](screenshots/planTrip.jpg)
-![Notifications](screenshots/notifications.jpg)
-![Favorites](screenshots/favorite.jpg)
+- If you'd like to view screenshots of TreakLanka's Android application, you can find them in the "screenshots" folder in this repository.
 
 
