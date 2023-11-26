@@ -43,9 +43,12 @@ Explore TreakLanka's Android journey with Java, XML, RecyclerViews, CardViews, a
 
 ## Screenshots
 
-![Home fragment](/screen shots/homeMain.jpg)
-![Details Activity](/screen shots/details.jpg)
-![PlanTrip](/screen shots/planTrip.jpg)
-![Notifications](/screen shots/notifications.jpg)
-![Favorites](/screen shots/favorite.jpg)
+## Screenshots
+
+![Home fragment](screenshots/homeMain.jpg)
+![Details Activity](screenshots/details.jpg)
+![PlanTrip](screenshots/planTrip.jpg)
+![Notifications](screenshots/notifications.jpg)
+![Favorites](screenshots/favorite.jpg)
+
 
